@@ -30,7 +30,7 @@
     <div class="row" style=" margin-top: 1%;">
       <div class="col text-center">
         <a id="start" class="btn btn-danger btn-lg active rounded-pill"
-          style="margin-top:2%; margin-right:auto;margin-left:auto;width: 70%;" role="button"
+          style="margin-top:2%; margin-right:auto;margin-left:auto;width: 35%;" role="button"
           aria-pressed="true">Start</a>
       </div>
     </div>
@@ -87,7 +87,7 @@
       $('#question').html(qa.question);
 
       for (var i = 1; i < qa.options.length + 1; i++) {
-        $('#options-child').append('<a id=' + i + ' class="btn btn-info btn-lg active rounded-pill btn-options" style="margin-top:2%; margin-right:auto;width: 70%;" role="button" aria-pressed="true">' + qa.options[i - 1] + '</a>');
+        $('#options-child').append('<a id=' + i + ' class="btn btn-info btn-lg active rounded-pill btn-options" style="margin-top:2%; margin-right:auto;width: 35%;" role="button" aria-pressed="true">' + qa.options[i - 1] + '</a>');
       }
       document.querySelector('#options-child').addEventListener('click', function (event) {
         event.stopPropagation();
