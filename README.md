@@ -1,9 +1,3 @@
-# Password Generator
- This is a passowrd generator to generate a password for given criteria. The critera include:
-### Length of password 
-### If you wnat to include special characters or not. 
-### If you wnat to include numeric characters or not. 
-### If you wnat to include lowercase characters or not. 
-### If you wnat to include uppercase characters or not. 
+# Code Quiz
+ This code quiz will throw a series of questions to you one by one, and you choose your answer to these questions. If you answered correctly, your time budget will increase by 5. Otherwise, your time budget will decrease by 5. When you have finished all the questions or the time is out, game is over, and you could enter your initials. The score board will be displayed afterward.  
 
-When you select all the criteria, click the 'generate password' button to generate the password. Click the 'copy to clipboard' button to copy the password to the clipboard. 

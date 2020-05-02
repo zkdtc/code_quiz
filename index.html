@@ -1,134 +1,178 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <title>Code Quiz</title>
-  <script
-  src="https://code.jquery.com/jquery-3.5.0.js"
-  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+    crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-  <div class="background-image"> 
+  <div class="background-image" stule="height:90%;">
     <div class="alert alert-light text-center" role="alert">
-        <h1 id="header_this">Welcome to the code quiz! Click the 'Start' button to begin.</h1>
+      <h1 id="header_this">Welcome to the code quiz! Click the 'Start' button to begin.</h1>
     </div>
-  <div class="container">
-    <div id='question'>
-    
-    </div>
-    <div id='options'>
+    <div class="container text-center">
+      <div id='question' style='font-size:30px;'>
 
-    </div>
+      </div>
+      <div id='options'>
+
+      </div>
       <!--Create Card taking up 4 Columns-->
 
-  </div>
-      <div class="row" style="border-top: 2px solid #9e9d9d; margin-top: 1%;">
-        <div class="col-md-6">
-            <a id="start" class="btn btn-danger btn-lg active rounded-pill" style="margin-top:2%; margin-right:auto;width: 70%;" role="button" aria-pressed="true">Start</a>
-        </div>
-      </div>
-      <div id='timer' class="alert alert-primary" role="alert" id="status" style="margin-top:3%;">
-      </div>
-
-  
-  
     </div>
+    <div class="row" style=" margin-top: 1%;">
+      <div class="col text-center">
+        <a id="start" class="btn btn-danger btn-lg active rounded-pill"
+          style="margin-top:2%; margin-right:auto;margin-left:auto;width: 70%;" role="button"
+          aria-pressed="true">Start</a>
+      </div>
+    </div>
+    <div id='timer' class="alert alert-primary" role="alert" style="margin-top:3%;height:20%;">
+    </div>
+
+
+
+  </div>
   </div>
 
 
 
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
   <script>
-    var qa_arr=[{'question':'q1','options':['q1o1','q1o2','q1o3'],'answer':1},
-    {'question':'q2','options':['q2o1','q2o2','q2o3'],'answer':2},
-    {'question':'q3','options':['q3o1','q3o2','q3o3'],'answer':2}]
+    var qa_arr = [{ 'question': "Hyper Text Markup Language Stand For?", 'options': ["JavaScript", "XHTML", "CSS", "HTML"], 'answer': 4 },
+    { 'question': "Which language is used for styling web pages?", 'options': ["HTML", "JQuery", "CSS", "XML"], 'answer': 3 },
+    { 'question': "Which is not a JavaScript Framework?", 'options': ["Python Script", "JQuery", "Django", "NodeJS"], 'answer': 3 },
+    { 'question': "Which is used for Connect To Database?", 'options': ["PHP", "HTML", "JS", "All"], 'answer': 1 }]
 
-   var score=0;
-   $('#start').on('click',startQuiz);
-   var time_remaining=6;
+    var score = 0;
+    $('#start').on('click', startQuiz);
+    var time_remaining = 60;
 
-   var optionsEl=document.querySelector('#options');
+    var optionsEl = document.querySelector('#options');
 
-   function start_timer(){
-       clearInterval();
-       setInterval(function(){
-         $('#timer').html('Time Remaining: '+String(time_remaining));
-         time_remaining--;
-         if(time_remaining<=0){
-           game_over();
-         }
-         },1000);
-   }
-
-   function post_a_question(ind_question){
-          console.log('ind_question='+ind_question);
-          qa=qa_arr[ind_question];
-          $('#question').empty();
-          $('#options-child').remove();
-          $('#options').append('<div id="options-child"></div>');
-          $('#question').html(qa.question);
-
-          for(var i=1;i<qa.options.length+1; i++){
-            $('#options-child').append('<a id='+i+' class="btn btn-info btn-lg active rounded-pill btn-options" style="margin-top:2%; margin-right:auto;width: 70%;" role="button" aria-pressed="true">'+qa.options[i-1]+'</a>');
-          }
-          document.querySelector('#options-child').addEventListener('click',function(event){
-            event.stopPropagation();
-            event.defaultPrevented;
-            ind=parseInt(event.target.id);
-            console.log('ind='+ind);
-            if(ind==qa.answer){
-              time_remaining+=5
-              console.log('+5');
-              ind_question++;
-              score++;
-              if(ind_question>=qa_arr.length || time_remaining<=0){
-                 game_over();
-              }
-              else{
-              post_a_question(ind_question);
-              }
-              }
-            else{
-                time_remaining-=5;
-                console.log('-5');
-                ind_question++;
-                if(ind_question>=qa_arr.length || time_remaining<=0){
-                       game_over();
-                   }
-                else{
-                     post_a_question(ind_question);
-                    }
-
-         }
-
-       });
-   }
-
-
-  
-
-   function startQuiz(){
-    //  Start the timer
-    start_timer();
-    $('#start').remove();
-    $('#header_this').html('Quiz in progress!');
-    post_a_question(0);   
+    function start_timer() {
+      clearInterval();
+      setInterval(function () {
+        $('#timer').html('Time Remaining: ' + String(time_remaining));
+        time_remaining--;
+        if (time_remaining <= 0) {
+          game_over();
+          return
+        }
+      }, 1000);
     }
 
-    function game_over(){
+    function post_a_question(ind_question) {
+      console.log('ind_question=' + ind_question);
+      qa = qa_arr[ind_question];
+      $('#question').empty();
+      $('#options-child').remove();
+      $('#options').append('<div id="options-child"></div>');
+      $('#question').html(qa.question);
+
+      for (var i = 1; i < qa.options.length + 1; i++) {
+        $('#options-child').append('<a id=' + i + ' class="btn btn-info btn-lg active rounded-pill btn-options" style="margin-top:2%; margin-right:auto;width: 70%;" role="button" aria-pressed="true">' + qa.options[i - 1] + '</a>');
+      }
+      document.querySelector('#options-child').addEventListener('click', function (event) {
+        event.stopPropagation();
+        event.defaultPrevented;
+        ind = parseInt(event.target.id);
+        if (ind == qa.answer) {
+          time_remaining += 5
+          console.log('+5');
+          ind_question++;
+          score++;
+          if (ind_question >= qa_arr.length || time_remaining <= 0) {
+            game_over();
+          }
+          else {
+            post_a_question(ind_question);
+          }
+        }
+        else {
+          time_remaining -= 5;
+          console.log('-5');
+          ind_question++;
+          if (ind_question >= qa_arr.length || time_remaining <= 0) {
+            game_over();
+          }
+          else {
+            post_a_question(ind_question);
+          }
+
+        }
+
+      });
+    }
+
+
+
+
+    function startQuiz() {
+      //  Start the timer
+      start_timer();
+      $('#start').remove();
+      $('#header_this').html('Quiz in progress!');
+      post_a_question(0);
+    }
+
+    function game_over() {
       $('#question').empty();
       $('#options').empty();
-      $('#header_this').html('Game is Over! You answered '+score+' questions correctly!');
+      $('#header_this').html('Quiz is over! You answered ' + score + ' questions correctly! Pleae enter your initial');
+      $('#timer').remove();
+      $('#question').append('<form> <div> <input type="text">  <input type="submit" style="font-size:20px;"> </div></form>')
+      // Submit the initials and score
+      $("form").submit(function (event) {
+        event.preventDefault();
+        init_arr = JSON.parse(localStorage.getItem('init_arr'));
+        score_arr = JSON.parse(localStorage.getItem('score_arr'));
+        if (!init_arr) {
+          init_arr = [$("input").first().val()];
+          score_arr = [score];
+        }
+        else {
+          init_arr.push($("input").first().val());
+          score_arr.push(score);
+        }
+        localStorage.setItem('init_arr', JSON.stringify(init_arr));
+        localStorage.setItem('score_arr', JSON.stringify(score_arr));
+
+        $("form").remove();
+        $('#header_this').html('Score Board');
+        $('#question').append('<br>');
+        for (i = 0; i < init_arr.length; i++) {
+          $('#question').append(init_arr[i] + '    ' + score_arr[i]);
+          $('#question').append('<br>');
+        }
+      time_remaining=1000000;
+      return
+       
+
+
+      })
+    
+
     }
+
 
   </script>
 </body>
-</html>
 
+</html>
